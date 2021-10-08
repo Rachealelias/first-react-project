@@ -56,6 +56,10 @@ h2{
   display:block;
 }
 
+p{
+  color:white;
+}
+
 .header {
   display: flex;
     justify-content: center;
@@ -64,4 +68,27 @@ h2{
     width: 100%;
     background-color:azure;
 
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:500px;
+  width: 400px;
+  border:2px grey solid;
+  margin-bottom: 10px;
+}
+
+button{
+  background: gray;
+}
+
+#add{
+  background-color:lightskyblue;
+  height: 400px;
+  width: auto;
+  text-align: center;
+  
 }

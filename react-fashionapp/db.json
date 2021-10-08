@@ -40,7 +40,6 @@
       "category": "women",
       "image": "https://i.pinimg.com/474x/3f/7b/9b/3f7b9b287b10a4670bf897851731cfa9.jpg"
     },
-   
     {
       "id": 6,
       "title": "undershirts ",
@@ -49,8 +48,6 @@
       "category": "men",
       "image": "https://m.media-amazon.com/images/I/71OwBNw45gL._AC_UL1500_.jpg"
     },
-   
-    
     {
       "id": 7,
       "title": "jean",
@@ -130,34 +127,38 @@
       "description": "comfy",
       "category": "men",
       "image": "https://m.media-amazon.com/images/I/A1HSAjgc4zL._AC_UX385_.jpg"
-      },
-   
-      {
+    },
+    {
       "id": 17,
       "title": "hoodie",
       "price": "25",
       "description": "casual",
       "category": "men",
       "image": "https://m.media-amazon.com/images/I/61wf+LQF4SL._AC_UY1000_.jpg"
-       },
-    
-       {
-      "id":18,
+    },
+    {
+      "id": 18,
       "title": "Hoodie",
       "price": "25",
       "description": "casual",
       "category": "men",
       "image": "https://m.media-amazon.com/images/I/716ZNQf1j7L._AC_UX385_.jpg"
-      },
-    
-      {
-      "id":19,
+    },
+    {
+      "id": 19,
       "title": "sweatpants",
       "price": "100 ",
       "description": "very very useful",
       "category": "men",
       "image": "https://m.media-amazon.com/images/I/51vHmp4mn6L._AC_UX385_.jpg"
-      
+    },
+    {
+      "id": "20",
+      "title": "T shirts",
+      "price": "20$",
+      "description": "Comfy",
+      "category": "women",
+      "image": "https://m.media-amazon.com/images/I/81ptcKx1-cL._AC_UY445_.jpg"
     }
   ]
 }

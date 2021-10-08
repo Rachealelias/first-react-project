@@ -1,49 +1,33 @@
 import React from "react";
+
 import { NavLink} from "react-router-dom";
 
 const linkStyles = {
   width: "100px",
-  padding: "12px",
+  //padding: "12px",
   margin: "0 6px 6px",
-  background: "blue",
+  background: "grey",
   textDecoration: "none",
   color: "white",
+  
 };
 
-function Navbar(props) {
-  const {setSignedUP, routerProps} = props;
-  
-    function handleLogout() {
-        setSignedUP(false);
-      routerProps.history.push("/SignUp");
-    }
+function NavBar() {
 
-    return (
-        <div>
-          <NavLink
-            to="/"
-            
-            style={linkStyles}
-            activeStyle={{
-              background: "darkblue",
-            }}
-          >
-            Home
-          </NavLink> 
-
-           <NavLink
-        to="/SignUp"
+  return (
+    <div>
+      <NavLink
+        to="/AddProduct"
         exact
         style={linkStyles}
-        activeStyle={{
-          background: "darkblue",
-        }}
+        // activeStyle={{
+        //   background: "darkblue",
+        // }}
       >
-        SignUp
-      </NavLink> 
-      <button onClick={handleLogout}>Logout</button>
+        AddProduct
+      </NavLink>
     </div>
   );
 }
 
-export default Navbar;
+export default NavBar
