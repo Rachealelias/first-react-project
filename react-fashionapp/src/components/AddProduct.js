@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 
 function AddProduct(props){
+  const  {routerProps, addProduct} = props
     const [formData, setFormData] = useState({
         id: "",
         title: "",
@@ -35,6 +36,11 @@ function AddProduct(props){
       "image": formData.image
     })
         })
+        .then(res => res.json())
+        .then(addProduct)
+        setFormData(true);
+
+        routerProps.history.push("/");
       }
 
       return (

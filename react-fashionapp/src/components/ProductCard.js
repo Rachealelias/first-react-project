@@ -1,34 +1,37 @@
 import React ,{useState}from "react"
 
 export default function ProductCard(props){
-const {Product, deleteProducts} = props
+  
+const {Product, deleteProduct} = props
 const like = '😎'
 const dislike='☹️'
+const [likeState, setLike] = useState(false)
 
-const {likeState, setLike} = useState(false)
-function handleLike(id){
-    fetch(`http://localhost:4000/products/${id}`, {
-        method: "PATCH",
+function handleLike(){
+  const config = {
+    method: "PATCH",
         headers: {
             'Content-Type':"application/json"
         },
         body: JSON.stringify({liked:!likeState})
-      })
-        .then((r) => r.json())
-        .then((data) => {
+  }
+  
+    fetch(`http://localhost:4000/products/${Product.id}`,config)
+        .then(r => r.json())
+        .then(data => {
             console.log(data, 'update')
             setLike(!likeState)
         })
 }
-     function handleDeleteClick(id) {
-       fetch(`http://localhost:4000/products/${id}`, {
+     function handleDeleteClick() {
+       fetch(`http://localhost:4000/products/${Product.id}`, {
          method: "DELETE",
        })
-         .then((r) => r.json())
-         .then((data) => {
-             deleteProducts(data.id)
-             console.log(data)
-           
+         .then(r => r.json())
+         .then(data => {
+          // console.log(data)
+          deleteProduct(Product.id)
+           console.log(data, 'deleted item')
          });
      }
     return (

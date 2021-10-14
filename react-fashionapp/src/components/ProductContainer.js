@@ -1,7 +1,8 @@
 import React from "react";
 import ProductCard from "./ProductCard";
-function ProductContainer({products,deleteProducts}){
-    const productArr = products.map((e, index) => <ProductCard key={index} Product={e} deleteProducts={deleteProducts}/>)
+function ProductContainer({products,deleteProduct}){
+    const productArr = products.map((e, index) => <ProductCard key={index} Product={e} 
+    deleteProduct={deleteProduct}/>)
 
     
     return (

@@ -5,7 +5,7 @@ import ProductContainer from "./ProductContainer";
 
 
 function Home(props) {
-  const {Signedup,products,setSignedUp,routerProps} = props;
+  const {Signedup,products,setSignedUp,routerProps,deleteProduct} = props;
 
     if (!Signedup) return <Redirect to ="/SignUp"/>
     
@@ -20,7 +20,7 @@ function Home(props) {
       <div>
         <button onClick={handleLogout}>Logout</button>
         </div>
-      <ProductContainer products={products}/>
+    <ProductContainer products={products} deleteProduct={deleteProduct}/>
     </div>
   )
 }

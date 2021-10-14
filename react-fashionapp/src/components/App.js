@@ -6,6 +6,7 @@ import Home from "./Home";
 import SignUp from "./SignUp";
 import NavBar from "./NavBar";
 import AddProduct from "./AddProduct";
+import AdminPage from "./AdminPage";
 
 
 function App() {
@@ -19,9 +20,17 @@ function App() {
       .then(setProducts)
     }, []);
 
-    const deleteProducts = (id) =>{
-      const newProducts = products.filter((p) => p.id !== id);
-           setProducts(newProducts);
+    function deleteProduct(id){
+      const newProducts = products.filter(p => p.id !== id);
+      console.log(id)
+          setProducts(newProducts);
+          console.log(products)
+    }
+
+    function addProduct(obj){
+      console.log(obj, 'add product')
+      const newArray= [...products, obj]
+      setProducts(newArray)
     }
     
   return (
@@ -35,13 +44,18 @@ function App() {
       
         <Route exact path="/"
           render={(routerProps)=>
-          <Home  routerProps={routerProps} Signedup={Signedup} products={products} deleteProducts={deleteProducts} 
+          <Home  routerProps={routerProps} Signedup={Signedup} products={products} 
+          deleteProduct={deleteProduct} 
            setSignedUp={setSignedUp} />}  >
         </Route>
 
-       <Route exact path="/AddProduct">
-         <AddProduct />
+       <Route exact path="/AddProduct"
+       render={(routerProps)=>
+         <AddProduct routerProps={routerProps} addProduct={addProduct}/>}>
         </Route>
+
+        <Route exact path="/AdminPage"
+        render={(routerProps) =><AdminPage routerProps={routerProps}/>}></Route>
       </Switch>
     </div>
   )
