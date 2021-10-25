@@ -38,6 +38,7 @@ function AddProduct(props){
         })
         .then(res => res.json())
         .then(addProduct)
+       
         setFormData(true);
 
         routerProps.history.push("/");

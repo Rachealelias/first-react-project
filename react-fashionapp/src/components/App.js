@@ -6,13 +6,11 @@ import Home from "./Home";
 import SignUp from "./SignUp";
 import NavBar from "./NavBar";
 import AddProduct from "./AddProduct";
-import AdminPage from "./AdminPage";
 
 
 function App() {
-  
-  const [Signedup, setSignedUp] = useState(false);
- // console.log(Signedup)
+   const [Signedup, setSignedUp] = useState(false);
+  // console.log(Signedup)
   const [products, setProducts] = useState([])
     useEffect(() => {
       fetch("http://localhost:4000/products")
@@ -33,30 +31,29 @@ function App() {
       setProducts(newArray)
     }
     
-  return (
+     return (
     <div className="App">
       {Signedup ? <NavBar/> : null } 
       <Switch>
         <Route exact path="/SignUp"
            render={(routerProps)=>
-           <SignUp routerProps={routerProps} setSignedUp={setSignedUp} />}>
+           <SignUp routerProps={routerProps} setSignedUp={setSignedUp}/>}>
         </Route>
       
         <Route exact path="/"
           render={(routerProps)=>
           <Home  routerProps={routerProps} Signedup={Signedup} products={products} 
           deleteProduct={deleteProduct} 
-           setSignedUp={setSignedUp} />}  >
+           setSignedUp={setSignedUp}/>} 
+            >
         </Route>
 
        <Route exact path="/AddProduct"
        render={(routerProps)=>
          <AddProduct routerProps={routerProps} addProduct={addProduct}/>}>
         </Route>
-
-        <Route exact path="/AdminPage"
-        render={(routerProps) =><AdminPage routerProps={routerProps}/>}></Route>
-      </Switch>
+     </Switch>
+    
     </div>
   )
     
