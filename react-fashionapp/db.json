@@ -180,14 +180,31 @@
       "description": "stretchy",
       "category": "women",
       "image": "https://m.media-amazon.com/images/I/5150mXlgk7L._AC_UX385_.jpg"
+    },
+    {
+      "title": "Jean",
+      "price": "20$",
+      "description": "stretchy",
+      "category": "men",
+      "image": "https://m.media-amazon.com/images/I/71MZ9cTdZvL._AC_UX342_.jpg",
+      "id": "-PXmMSf"
     }
   ],
-
-  "users":
-  [
+  "users": [
     {
-      "email":"racheal@gmail.com",
-      "password":"ryuvj"
+      "id": 1,
+      "email": "racheal@gmail.com",
+      "password": "ryuvj"
+    },
+    {
+      "email": "koredebello@gmail.com",
+      "password": "rtguy",
+      "id": 2
+    },
+    {
+      "email": "kristle@gmail.com",
+      "password": "theask",
+      "id": 3
     }
   ]
 }

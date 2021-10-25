@@ -17,11 +17,11 @@ function SignUp(props) {
     });
   }
  
-  function addUser(obj){
-   // console.log(obj, 'add user')
-    const newArray= [...formData, obj]
-    setFormData(newArray)
-  }
+  // function addUser(obj){
+  //   console.log(obj, 'add user')
+  //   const newArray= [...formData, obj]
+  //   setFormData(newArray)
+  // }
     
  function handleSubmit(e) {
     e.preventDefault();
@@ -37,8 +37,8 @@ function SignUp(props) {
       "password": formData.password
     })
         })
-        .then(res => res.json())
-        .then(addUser)
+       // .then(res => res.json())
+       // .then(addUser)
        
         setSignedUp(true);
         routerProps.history.push("/");

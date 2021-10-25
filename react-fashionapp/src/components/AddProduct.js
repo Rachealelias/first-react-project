@@ -28,7 +28,6 @@ function AddProduct(props){
     
     body: JSON.stringify(
     {
-      "id": formData.id,
       "title": formData.title,
       "price": formData.price,
       "description": formData.description,
@@ -48,7 +47,7 @@ function AddProduct(props){
           <div id="add">
               <h2> New Products</h2><br/>
               <form onSubmit={handleSubmit}><br/>
-        <label>
+        {/* <label>
           id:
           <input
             type="text"
@@ -56,7 +55,7 @@ function AddProduct(props){
             value={formData.id}
             onChange={handleChange}
           />
-        </label><br/>
+        </label><br/> */}
 
         <label>
             title:
